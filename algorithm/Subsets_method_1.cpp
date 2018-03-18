@@ -2,7 +2,7 @@
 
 #include <vector>
 /*
-²ÉÓÃ»ØËİ·¨µÄËã·¨Ë¼Ïë 
+é‡‡ç”¨å›æº¯æ³•çš„ç®—æ³•æ€æƒ³ 
 */
 class Solution {
 public:
@@ -24,7 +24,7 @@ private:
 		result.push_back(item);
 		generate(i + 1, nums, item, result);
 		
-		//Ã¿µ±ÉÏÃæÖ´ĞĞÍê³ÉreturnµÄÊ±ºò ÔÙ½øĞĞ»ØËİ 
+		//æ¯å½“ä¸Šé¢æ‰§è¡Œå®Œæˆreturnçš„æ—¶å€™ å†è¿›è¡Œå›æº¯ 
 		item.pop_back();
 		generate(i + 1, nums, item, result);
 	}
