@@ -3,7 +3,7 @@ package edu.bjtu.sse;
 import java.util.ArrayList;
 
 /**
- * Éú²ún×éÀ¨ºÅËùÓĞµÄ¿ÉÄÜµÄ½á¹û
+ * ç”Ÿäº§nç»„æ‹¬å·æ‰€æœ‰çš„å¯èƒ½çš„ç»“æœ
  * @author wupengfei
  *
  */
@@ -21,9 +21,9 @@ public class Parenthenses {
 
 	/**
 	 * 
-	 * @param item ÓÃÀ´Éú³ÉÀ¨ºÅµÄ×Ö·û´®£¬ 
-	 * @param  n  nÎª×éÊı£¬
-	 * @param result result Îª×îÖÕ½á¹û
+	 * @param item ç”¨æ¥ç”Ÿæˆæ‹¬å·çš„å­—ç¬¦ä¸²ï¼Œ 
+	 * @param  n  nä¸ºç»„æ•°ï¼Œ
+	 * @param result result ä¸ºæœ€ç»ˆç»“æœ
 	 */
 	private static void generate(String item, int n, ArrayList<String> result) {
 		if(item.length() == 2*n){
