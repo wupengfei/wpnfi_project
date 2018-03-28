@@ -1,7 +1,7 @@
 package edu.bjtu.sse.treegraph;
 
 /**
- * 
+ * äºŒå‰æ ‘çš„ä¸‰ç§æ·±åº¦éå†
  * @author wupengfei
  *
  */
@@ -34,9 +34,9 @@ public class ConstructBinaryTree {
 	}
 	
 	/**
-	 * Ç°Ğò±éÀú £¬ ¸ù×óÓÒ
+	 * å‰åºéå† ï¼Œ æ ¹å·¦å³
 	 * @param tree 
-	 * @param layer ½ÚµãËùÔÚ²ãÊı
+	 * @param layer èŠ‚ç‚¹æ‰€åœ¨å±‚æ•°
 	 */
 	public void preOrder(TreeNode tree,int layer){
 		if(tree == null){
@@ -51,9 +51,9 @@ public class ConstructBinaryTree {
 	}
 	
 	/**
-	 * ÖĞĞò±éÀú £¬ ×ó¸ùÓÒ
+	 * ä¸­åºéå† ï¼Œ å·¦æ ¹å³
 	 * @param tree 
-	 * @param layer ½ÚµãËùÔÚ²ãÊı
+	 * @param layer èŠ‚ç‚¹æ‰€åœ¨å±‚æ•°
 	 */
 	public void midOrder(TreeNode tree,int layer){
 		if(tree == null){
@@ -68,9 +68,9 @@ public class ConstructBinaryTree {
 	}
 	
 	/**
-	 * ºóĞò±éÀú £¬ ×óÓÒ¸ù
+	 * ååºéå† ï¼Œ å·¦å³æ ¹
 	 * @param tree 
-	 * @param layer ½ÚµãËùÔÚ²ãÊı
+	 * @param layer èŠ‚ç‚¹æ‰€åœ¨å±‚æ•°
 	 */
 	public void lastOrder(TreeNode tree,int layer){
 		if(tree == null){
