@@ -3,6 +3,11 @@ package edu.bjtu.sse;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * N皇后问题，基于数组的标记矩阵
+ * @param n
+ * @return
+ */
 public class NQueensArray {
 
 	/**
