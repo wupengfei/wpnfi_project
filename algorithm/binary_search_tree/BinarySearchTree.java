@@ -10,8 +10,68 @@ import java.util.List;
  */
 public class BinarySearchTree {
 	
+		/**
+	 * 
+	 * @param node
+	 * @param value
+	 * @return
+	 */
+	public boolean BStSearchLoop(TreeNode node,int value){
+		while(node!=null){
+			if(node.val == value){
+				return true;
+			}
+			if(value < node.val){
+				node = node.left;
+			} else {
+				node = node.right;
+			}
+		}
+		return false;
+		/*if(node.val == value){
+			return true;
+		} else if(value > node.val){
+			if(node.right != null){
+				 return this.BStSearchLoop(node.right, value);
+			}
+			return false;
+		} else if(value < node.val){
+			if(node.left != null){
+				return  this.BStSearchLoop(node.left, value);
+			}
+			return false;
+		}
+		return false;*/
+	}
+	
 	/**
-	 * Ñ­»·²åÈë¶þ²æÅÅÐòÊ÷
+	 * é€’å½’æŸ¥æ‰¾æŸæ•°å€¼
+	 * @param node
+	 * @param value
+	 * @return
+	 */
+	public boolean BSTSearchRecurision(TreeNode node,int value) {
+		System.out.println("node.val=" + node.val);
+		if(node.val == value) {
+			return true;
+		}
+		if(node.val < value){
+			if(node.right != null){ //å³å­æ ‘ä¸ç©ºæ—¶ï¼Œ å¯ä»¥ç»§ç»­æœç´¢å³å­æ ‘
+				System.out.println("node_right=" + node.val);
+				return this.BSTSearchRecurision(node.right, value);
+			}
+			return false;
+		} else {
+			if(node.left != null){
+				System.out.println("node_left=" + node.val);
+				return this.BSTSearchRecurision(node.left, value);
+			}
+			return false;
+		}
+	}
+	
+	/**
+	 * å¾ªçŽ¯æ’å…¥äºŒå‰æŽ’åºæ ‘
 	 * @param node
 	 * @param insertNode
 	 */
@@ -32,7 +92,7 @@ public class BinarySearchTree {
 	}
 	
 	/**
-	 * µÝ¹é²åÈë½Úµã
+	 * é€’å½’æ’å…¥èŠ‚ç‚¹
 	 * @param node
 	 * @param insertNode
 	 */
@@ -46,14 +106,14 @@ public class BinarySearchTree {
 		} else {
 			if(node.right != null){
 				this.BSTInsert(node.right, insertNode);
-			} else { //µ±ÓÒ×ÓÊ÷£¬ Îª¿ÕÊ±£¬ ½«nodeµÄÓÒÖ¸ÕëÓë´ý²åÈëµÄ½ÚµãÏàÁ¬½Ó
+			} else { //å½“å³å­æ ‘ï¼Œ ä¸ºç©ºæ—¶ï¼Œ å°†nodeçš„å³æŒ‡é’ˆä¸Žå¾…æ’å…¥çš„èŠ‚ç‚¹ç›¸è¿žæŽ¥
 				node.right = insertNode;
 			}
 		}
 	}
 	
 	/**
-	 * Ç°Ðò±éÀú
+	 * å‰åºéåŽ†
 	 * @param node
 	 * @param layer
 	 */
