@@ -15,7 +15,7 @@ import java.util.Enumeration;
  * </p>
  * 
  * @author pengfei.wu
- * @date 2018Äê4ÔÂ29ÈÕ
+ * @date 2018å¹´4æœˆ29æ—¥
  */
 public class TryResearch   {
 
@@ -33,13 +33,13 @@ public class TryResearch   {
 	}
 
 	/**
-	 * Java SE 7ÒÔ¼°ºóĞø°æ±¾ÖĞ£¬BufferedReaderÀàÊµÏÖÁËjava.lang.AutoCloseable½Ó¿Ú¡£ ÒòÎª
-	 * BufferedReader ÊµÀıÊÇÔÚ try-with-resource Óï¾äÖĞÉùÃ÷µÄ, ËùÒÔ²»¹Ü try Óï¾äÕı³£µØÍê³É»òÊÇ ·¢ÉúÒâÍâ
-	 * (½á¹û¾ÍÊÇ BufferedReader.readLine ·½·¨Å×³öIOException)£¬BufferedReader¶¼½«»á¹Ø±Õ¡£ Èç¹û
-	 * readLine ºÍ close ·½·¨¾ùÅ×³öÒì³££¬ÄÇÃ´ readFirstLineFromFileWithFinallyBlock ·½·¨½«Å×³ö´Ó
-	 * finally ¿éÖĞÅ×³öµÄÒì³£; try ¿éÖĞÅ×³öµÄÒì³£±»ÒÖÖÆÁË¡£Óë´ËÏà·´, ÔÚ readFirstLineFromFile Õâ¸öÀı×ÓÖĞ, Èç¹û
-	 * try ¿éºÍ try-with-resources Óï¾ä¾ùÅ×³öÒì³£, ÄÇÃ´ readFirstLineFromFile ½«Å×³ö´Ó try
-	 * ¿éÖĞÅ×³öµÄÒì³£; try-with-resources ¿éÅ×³öµÄÒì³£±»ÒÖÖÆÁË¡£ÔÚJava SE 7 ÒÔ¼°ºóĞøµÄ°æ±¾ÖĞ, Äã¿ÉÒÔ¼ìË÷±»ÒÖÖÆµÄÒì³££»
+	 * Java SE 7ä»¥åŠåç»­ç‰ˆæœ¬ä¸­ï¼ŒBufferedReaderç±»å®ç°äº†java.lang.AutoCloseableæ¥å£ã€‚ å› ä¸º
+	 * BufferedReader å®ä¾‹æ˜¯åœ¨ try-with-resource è¯­å¥ä¸­å£°æ˜çš„, æ‰€ä»¥ä¸ç®¡ try è¯­å¥æ­£å¸¸åœ°å®Œæˆæˆ–æ˜¯ å‘ç”Ÿæ„å¤–
+	 * (ç»“æœå°±æ˜¯ BufferedReader.readLine æ–¹æ³•æŠ›å‡ºIOException)ï¼ŒBufferedReaderéƒ½å°†ä¼šå…³é—­ã€‚ å¦‚æœ
+	 * readLine å’Œ close æ–¹æ³•å‡æŠ›å‡ºå¼‚å¸¸ï¼Œé‚£ä¹ˆ readFirstLineFromFileWithFinallyBlock æ–¹æ³•å°†æŠ›å‡ºä»
+	 * finally å—ä¸­æŠ›å‡ºçš„å¼‚å¸¸; try å—ä¸­æŠ›å‡ºçš„å¼‚å¸¸è¢«æŠ‘åˆ¶äº†ã€‚ä¸æ­¤ç›¸å, åœ¨ readFirstLineFromFile è¿™ä¸ªä¾‹å­ä¸­, å¦‚æœ
+	 * try å—å’Œ try-with-resources è¯­å¥å‡æŠ›å‡ºå¼‚å¸¸, é‚£ä¹ˆ readFirstLineFromFile å°†æŠ›å‡ºä» try
+	 * å—ä¸­æŠ›å‡ºçš„å¼‚å¸¸; try-with-resources å—æŠ›å‡ºçš„å¼‚å¸¸è¢«æŠ‘åˆ¶äº†ã€‚åœ¨Java SE 7 ä»¥åŠåç»­çš„ç‰ˆæœ¬ä¸­, ä½ å¯ä»¥æ£€ç´¢è¢«æŠ‘åˆ¶çš„å¼‚å¸¸ï¼›
 	 * <p>
 	 * Title: testTryCTwo
 	 * </p>
@@ -58,11 +58,11 @@ public class TryResearch   {
 	}
 	
 	/**
-	 * Óë try-with-resources Óï¾ä¹ØÁªµÄ´úÂë¿é¿ÉÄÜ»áÅ×³öÒì³£¡£ÔÚ writeToFileZipFileContentsÕâ¸öÀı×ÓÖĞ, 
-	 *  µ±ÊÔÍ¼¹Ø±Õ ZipFile ºÍ BufferedWriter ¶ÔÏóÊ±£¬try ¿é¿ÉÄÜ»áÅ×³öÒ»¸öÒì³££¬²¢ÇÒ try-with-resources Óï¾ä¿ÉÄÜÅ×³ö¶à´ïÁ½¸öÒì³£ ¡£
-	 *  Èç¹û try ¿éÅ×³öÒì³£²¢ÇÒ try-with-resources Óï¾äÅ×³öÒ»¸ö»ò¶à¸öÒì³££¬ÄÇÃ´´Ó try-with-resources Óï¾äÖĞÅ×³öµÄÒì³£½«»á±»ÒÖÖÆ,
-	 *   ²¢ÇÒ¿éÅ×³öµÄÒì³£ÊÇÓÉ writeToFileZipFileContents ·½·¨Å×³öµÄÄÇÒ»¸ö¡£
-	 * Äã¿ÉÒÔÍ¨¹ıµ÷ÓÃÓÉ try¿éÅ×³öµÄÒì³£µÄThrowable.getSuppressed ·½·¨¼ìË÷ÕâĞ©±»ÒÖÖÆµÄÒì³£ĞÅÏ¢¡£
+	 * ä¸ try-with-resources è¯­å¥å…³è”çš„ä»£ç å—å¯èƒ½ä¼šæŠ›å‡ºå¼‚å¸¸ã€‚åœ¨ writeToFileZipFileContentsè¿™ä¸ªä¾‹å­ä¸­, 
+	 *  å½“è¯•å›¾å…³é—­ ZipFile å’Œ BufferedWriter å¯¹è±¡æ—¶ï¼Œtry å—å¯èƒ½ä¼šæŠ›å‡ºä¸€ä¸ªå¼‚å¸¸ï¼Œå¹¶ä¸” try-with-resources è¯­å¥å¯èƒ½æŠ›å‡ºå¤šè¾¾ä¸¤ä¸ªå¼‚å¸¸ ã€‚
+	 *  å¦‚æœ try å—æŠ›å‡ºå¼‚å¸¸å¹¶ä¸” try-with-resources è¯­å¥æŠ›å‡ºä¸€ä¸ªæˆ–å¤šä¸ªå¼‚å¸¸ï¼Œé‚£ä¹ˆä» try-with-resources è¯­å¥ä¸­æŠ›å‡ºçš„å¼‚å¸¸å°†ä¼šè¢«æŠ‘åˆ¶,
+	 *   å¹¶ä¸”å—æŠ›å‡ºçš„å¼‚å¸¸æ˜¯ç”± writeToFileZipFileContents æ–¹æ³•æŠ›å‡ºçš„é‚£ä¸€ä¸ªã€‚
+	 * ä½ å¯ä»¥é€šè¿‡è°ƒç”¨ç”± tryå—æŠ›å‡ºçš„å¼‚å¸¸çš„Throwable.getSuppressed æ–¹æ³•æ£€ç´¢è¿™äº›è¢«æŠ‘åˆ¶çš„å¼‚å¸¸ä¿¡æ¯ã€‚
 	 * <p>Title: writeToFileZipFileContents</p>  
 	 * <p>Description: </p>  
 	 * @param zipFileName
@@ -93,9 +93,9 @@ public class TryResearch   {
 	}
 
 	public static void main(String[] args) {
-		String path = "H:\\workspace\\algorithm\\src\\edu\\bjtu\\nio\\FileChannelTest.java";
-		String zipPath = "F:\\2017-2018µÚ¶şÑ§ÆÚ\\Èí¼ş¹¤³ÌÂÛÎÄÓëĞ´×÷_ĞÏÎ¢Î¢(Ó¢ÎÄ)\\Èí¼ş¹¤³ÌÂÛÎÄÓëĞ´×÷_ĞÏÎ¢Î¢(Ó¢ÎÄ).zip";
-		String outFile = "F:\\2017-2018µÚ¶şÑ§ÆÚ\\Èí¼ş¹¤³ÌÂÛÎÄÓëĞ´×÷_ĞÏÎ¢Î¢(Ó¢ÎÄ)\\filename.txt";
+		String path = "H:\\xxxxxxxFileChannelTest.java";
+		String zipPath = "F:\\xxxxxxxxxx.zip";
+		String outFile = "F:\\xxxxxfilename.txt";
 		TryResearch tr = new TryResearch();
 		try {
 			tr.writeToFileZipFileContents(zipPath, outFile);
